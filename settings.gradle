@@ -1,0 +1,15 @@
+rootProject.name = "Code"
+include ':app'
+// 业务组件
+include ':business:base'
+include ':business:home'
+include ':business:component'
+// 功能组件
+include ':library:map'
+include ':library:pay'
+include ':library:qrcode'
+include ':library:umeng'
+include ':library:web'
+// 底层核心
+include ':frame:core'
+include ':frame:proguard'

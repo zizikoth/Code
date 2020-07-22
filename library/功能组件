@@ -1,0 +1,15 @@
+map
+需要在map模块中的清单文件中添加高德地图的ApiKey
+
+pay
+无需配置
+
+qrcode
+如果需要扫描界面 参考temple.kt
+
+umeng
+在app中注册 在清单文件中修改QQ的配置AppKey
+
+web
+无需配置
+

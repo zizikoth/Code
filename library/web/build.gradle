@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+	compileSdkVersion Config.compileSdkVersion
+	defaultConfig {
+		minSdkVersion Config.minSdkVersion
+		targetSdkVersion Config.targetSdkVersion
+		versionCode Config.versionCode
+		versionName Config.versionName
+		multiDexEnabled true
+	}
+
+	compileOptions {
+		targetCompatibility JavaVersion.VERSION_1_8
+		sourceCompatibility JavaVersion.VERSION_1_8
+	}
+
+	kotlinOptions { jvmTarget = "1.8" }
+}
+
+dependencies {
+
+	api DeptConfig.AgentWeb
+	implementation project(path: ':frame:core')
+}

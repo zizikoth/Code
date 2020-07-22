@@ -1,0 +1,24 @@
+<resources>
+	<!--  项目主题	-->
+	<style name="BaseTheme" parent="iTheme" />
+	
+	<!--  启动页	-->
+	<style name="Splash" parent="iTheme">
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowDisablePreview">true</item>
+		<!--	应该使用.9图来进行屏幕适配	-->
+		<item name="android:windowBackground">@color/white</item>
+	</style>
+	
+	<style name="kick_out_dialog_activity" parent="Theme.AppCompat.Light.Dialog">
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowCloseOnTouchOutside">false</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+
+</resources>

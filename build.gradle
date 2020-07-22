@@ -1,0 +1,30 @@
+apply plugin: 'com.alibaba.arouter'
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/cjt/maven' }
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath DeptConfig.Gradle
+        classpath DeptConfig.GradleKotlin
+        classpath DeptConfig.GradleKotlinAndroid
+        classpath DeptConfig.GradleARouter
+        //需要使用DoKit 1.等官方升级 2.gradle 3.5.3 wrapper 5.4.1
+        //classpath DeptConfig.GradleDoKit
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/cjt/maven' }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+	compileSdkVersion Config.compileSdkVersion
+	defaultConfig {
+		minSdkVersion Config.minSdkVersion
+		targetSdkVersion Config.targetSdkVersion
+		versionCode Config.versionCode
+		versionName Config.versionName
+	}
+
+	compileOptions {
+		targetCompatibility JavaVersion.VERSION_1_8
+		sourceCompatibility JavaVersion.VERSION_1_8
+	}
+
+	kotlinOptions { jvmTarget = "1.8" }
+
+	buildFeatures { dataBinding = true }
+
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	api DeptConfig.AppCompat
+	api DeptConfig.ARouter
+	api DeptConfig.AndroidUtilCode
+	api DeptConfig.AndroidSwipeLayout
+	api DeptConfig.BannerViewPager
+	api DeptConfig.BaseRecyclerViewAdapterHelper
+	api DeptConfig.CardView
+	api DeptConfig.ConstraintLayout
+	api DeptConfig.Coroutine
+	api DeptConfig.CoreKtx
+	api DeptConfig.Glide
+	api DeptConfig.GlideOkHttp
+	api DeptConfig.LoadSir
+	api DeptConfig.LuBan
+	api DeptConfig.LiveDataBus
+	api DeptConfig.LifecycleExtensions
+	api DeptConfig.LifecycleRuntimeKtx
+	api DeptConfig.LifecycleLiveDataKtx
+	api DeptConfig.LifecycleViewModelKtx
+	api DeptConfig.MultiDex
+	api DeptConfig.Material
+	api DeptConfig.Matisse
+	api DeptConfig.Kotlin
+	api DeptConfig.PickerView
+	api DeptConfig.Retrofit
+	api DeptConfig.RetrofitGson
+	api DeptConfig.RetrofitConverter
+	api DeptConfig.RecyclerView
+	api DeptConfig.RWidgetHelper
+	api DeptConfig.RefreshLayout
+	api DeptConfig.RefreshLayoutHeader
+	api DeptConfig.RefreshLayoutFooter
+	api DeptConfig.Transferee
+	api DeptConfig.TransfereeGlide
+	api DeptConfig.FlycoTabLayout
+	api DeptConfig.UCrop
+
+
+	debugApi(DeptConfig.DoKitDebug) { exclude module: 'utilcode' }
+	debugApi DeptConfig.DoKitLeakDebug
+
+	releaseApi DeptConfig.DoKitRelease
+
+	kapt DeptConfig.GlideCompiler
+}

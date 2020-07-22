@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.memo.core">
+	
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+	<application
+		android:usesCleartextTraffic="true"
+		tools:ignore="UnusedAttribute">
+		<activity
+			android:name="com.yalantis.ucrop.UCropActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+		
+		<meta-data
+			android:name="android.max_aspect"
+			android:value="2.4" />
+		
+		<meta-data
+			android:name="notch.config"
+			android:value="portrait|landscape" />
+		
+		<meta-data
+			android:name="android.notch_support"
+			android:value="true" />
+		
+		<provider
+			android:name="com.memo.core.tool.photo.MatisseFileProvider"
+			android:authorities="${applicationId}.provider.MatisseFileProvider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_paths_matisse" />
+		</provider>
+	</application>
+
+
+</manifest>

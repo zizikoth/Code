@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".ui.bottom.BottomActivity">
+	
+	<com.memo.core.widget.titleview.TitleView
+		android:id="@+id/mTitleView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:title_title_text="底部导航" />
+	
+	<FrameLayout
+		android:id="@+id/mFlContainer"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		app:layout_constraintBottom_toTopOf="@id/mBottomBar"
+		app:layout_constraintTop_toBottomOf="@id/mTitleView" />
+	
+	
+	<com.memo.core.widget.bottomnavigationbar.BottomNavigationViewEx
+		android:id="@+id/mBottomBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		app:itemTextColor="@color/selector_color_bottom"
+		app:labelVisibilityMode="labeled"
+		app:menu="@menu/menu_bottom" />
+
+
+</LinearLayout>
