@@ -3,7 +3,7 @@ package com.memo.home.ui.adapter
 import android.view.View
 import android.widget.ImageView
 import com.memo.base.entity.remote.BannerResponse
-import com.memo.core.tool.helper.ImageLoadHelper
+import com.memo.core.tool.helper.GlideHelper
 import com.memo.home.R
 import com.zhpan.bannerview.BaseBannerAdapter
 import com.zhpan.bannerview.BaseViewHolder
@@ -31,7 +31,7 @@ class BannerAdapter : BaseBannerAdapter<BannerResponse, BannerAdapter.BannerView
 
 	inner class BannerViewHolder(itemView: View) : BaseViewHolder<BannerResponse>(itemView) {
 		override fun bindData(data: BannerResponse, position: Int, pageSize: Int) {
-			ImageLoadHelper.loadImage(data.imagePath, (itemView as ImageView))
+			GlideHelper.loadImage(data.imagePath, (itemView as ImageView))
 		}
 	}
 

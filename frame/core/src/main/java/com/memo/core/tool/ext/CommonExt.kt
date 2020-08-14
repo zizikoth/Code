@@ -45,6 +45,8 @@ fun toastCancel() {
 	ToastUtils.cancel()
 }
 
+fun toast(value: () -> Any?) = toast(value())
+
 
 // ------------------------------- SmartRefreshLayout相关 -------------------------------//
 

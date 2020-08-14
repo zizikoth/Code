@@ -40,18 +40,18 @@ object LocalDir {
 	@JvmStatic
 	fun createLocalDir() {
 		PermissionHelper.grantedStorage(BaseApp.app) {
-			val dirCapture = FileUtils.createOrExistsDir(LocalDir.CACHE_DIR_CAPTURE)
-			val dirCompress = FileUtils.createOrExistsDir(LocalDir.CACHE_DIR_COMPRESS)
-			val dirCrop = FileUtils.createOrExistsDir(LocalDir.CACHE_DIR_CROP)
-			val dirFile = FileUtils.createOrExistsDir(LocalDir.CACHE_DIR_FILE)
-			val dirLog = FileUtils.createOrExistsDir(LocalDir.CACHE_DIR_LOG)
+			val dirCapture = FileUtils.createOrExistsDir(CACHE_DIR_CAPTURE)
+			val dirCompress = FileUtils.createOrExistsDir(CACHE_DIR_COMPRESS)
+			val dirCrop = FileUtils.createOrExistsDir(CACHE_DIR_CROP)
+			val dirFile = FileUtils.createOrExistsDir(CACHE_DIR_FILE)
+			val dirLog = FileUtils.createOrExistsDir(CACHE_DIR_LOG)
 			LogUtils.iTag(
 				"LocalDir",
-				"dirCapture = $dirCapture ${LocalDir.CACHE_DIR_CAPTURE}",
-				"dirCompress = $dirCompress ${LocalDir.CACHE_DIR_COMPRESS}",
-				"dirCrop = $dirCrop ${LocalDir.CACHE_DIR_CROP}",
-				"dirFile = $dirFile ${LocalDir.CACHE_DIR_FILE}",
-				"dirLog = $dirLog ${LocalDir.CACHE_DIR_LOG}"
+				"dirCapture = $dirCapture $CACHE_DIR_CAPTURE",
+				"dirCompress = $dirCompress $CACHE_DIR_COMPRESS",
+				"dirCrop = $dirCrop $CACHE_DIR_CROP",
+				"dirFile = $dirFile $CACHE_DIR_FILE",
+				"dirLog = $dirLog $CACHE_DIR_LOG"
 			)
 		}
 	}

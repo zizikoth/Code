@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.core.R
 import com.memo.core.tool.adapter.BaseRecyclerAdapter
-import com.memo.core.tool.helper.ImageLoadHelper
+import com.memo.core.tool.helper.GlideHelper
 
 /**
  * title:
@@ -24,7 +24,7 @@ class NineGridViewAdapter : BaseRecyclerAdapter<Any>(R.layout.item_nine_grid_vie
 	}
 
 	override fun convert(holder: BaseViewHolder, item: Any) {
-		ImageLoadHelper.loadImage(context, item, holder.getView(R.id.mIvPic))
+		GlideHelper.loadImage(item, holder.getView(R.id.mIvPic))
 
 		holder.setGone(R.id.mIvDel, item != mAddDrawableRes)
 			.setImageResource(R.id.mIvDel, mDelDrawableRes)

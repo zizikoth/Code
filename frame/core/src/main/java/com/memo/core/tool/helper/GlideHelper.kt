@@ -26,7 +26,7 @@ import java.io.File
  * @author zhou
  * @date 2018-11-13 下午8:37
  */
-object ImageLoadHelper {
+object GlideHelper {
 
 	fun loadImage(url: Any?, imageView: ImageView) {
 		GlideApp.with(imageView)
@@ -35,19 +35,6 @@ object ImageLoadHelper {
 			.into(imageView)
 	}
 
-	/**
-	 * 加载图片
-	 * @param context Context       上下文
-	 * @param url Any               图片地址
-	 * @param imageView ImageView   图片
-	 */
-	@JvmStatic
-	fun loadImage(context: Context, url: Any?, imageView: ImageView) {
-		GlideApp.with(context)
-			.load(url)
-			.centerCrop()
-			.into(imageView)
-	}
 
 	/**
 	 * 加载图片
@@ -59,13 +46,12 @@ object ImageLoadHelper {
 	 */
 	@JvmStatic
 	fun loadImage(
-		context: Context,
 		url: Any?,
 		@DrawableRes holderRes: Int,
 		@DrawableRes errorRes: Int,
 		imageView: ImageView
 	) {
-		GlideApp.with(context)
+		GlideApp.with(imageView)
 			.load(url)
 			.placeholder(holderRes)
 			.error(errorRes)
@@ -75,19 +61,17 @@ object ImageLoadHelper {
 
 	/**
 	 * 加载圆角图片
-	 * @param context Context       上下文
 	 * @param url Any               图片地址
 	 * @param radius Int            圆角
 	 * @param imageView ImageView   图片
 	 */
 	@JvmStatic
 	fun loadRoundImage(
-		context: Context,
 		url: Any?,
 		radius: Int,
 		imageView: ImageView
 	) {
-		GlideApp.with(context)
+		GlideApp.with(imageView)
 			.load(url)
 			.transform(CenterCrop(), RoundedCorners(radius))
 			.into(imageView)
@@ -104,14 +88,13 @@ object ImageLoadHelper {
 	 */
 	@JvmStatic
 	fun loadRoundImage(
-		context: Context,
 		url: Any?,
 		radius: Int,
 		@DrawableRes holderRes: Int,
 		@DrawableRes errorRes: Int,
 		imageView: ImageView
 	) {
-		GlideApp.with(context)
+		GlideApp.with(imageView)
 			.load(url)
 			.placeholder(holderRes)
 			.error(errorRes)
@@ -121,7 +104,22 @@ object ImageLoadHelper {
 
 	/**
 	 * 加载圆形图片
-	 * @param context Context       上下文
+	 * @param url Any               图片地址
+	 * @param imageView ImageView   图片
+	 */
+	@JvmStatic
+	fun loadCircleImage(
+		url: Any,
+		imageView: ImageView
+	) {
+		GlideApp.with(imageView)
+			.load(url)
+			.transform(CenterCrop(), CircleCrop())
+			.into(imageView)
+	}
+
+	/**
+	 * 加载圆形图片
 	 * @param url Any               图片地址
 	 * @param holderRes Int         占位图
 	 * @param errorRes Int          错误图
@@ -129,13 +127,12 @@ object ImageLoadHelper {
 	 */
 	@JvmStatic
 	fun loadCircleImage(
-		context: Context,
 		url: Any,
 		@DrawableRes holderRes: Int,
 		@DrawableRes errorRes: Int,
 		imageView: ImageView
 	) {
-		GlideApp.with(context)
+		GlideApp.with(imageView)
 			.load(url)
 			.placeholder(holderRes)
 			.error(errorRes)
@@ -174,7 +171,6 @@ object ImageLoadHelper {
 
 	/**
 	 * 加载图片监听
-	 * @param context Context               上下文
 	 * @param url Any                       图片地址
 	 * @param width Int                     宽
 	 * @param height Int                    高

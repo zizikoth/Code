@@ -17,12 +17,12 @@ object Versions {
 	const val TestJunit = "1.1.1"
 	const val TestEspresso = "3.2.0"
 
-	const val AppCompat = "1.1.0"
+	const val AppCompat = "1.2.0"
 	const val AgentWeb = "4.1.3"
 	const val ARouterApi = "1.5.0"
 	const val AndroidUtilCode = "1.29.0"
 	const val BaseRecyclerViewAdapterHelper = "3.0.4"
-	const val BannerViewPager = "3.1.0"
+	const val BannerViewPager = "3.1.5"
 	const val CardView = "1.0.0"
 	const val ConstraintLayout = "2.0.0-beta7"
 	const val Coroutine = "1.3.3"
@@ -46,7 +46,7 @@ object Versions {
 	const val Tab = "2.1.2"
 	const val UCrop = "2.2.3"
 
-	const val CoreKtx = "1.2.0"
+	const val CoreKtx = "1.3.1"
 	const val Lifecycle = "2.2.0"
 
 	const val DoKit = "3.1.6"

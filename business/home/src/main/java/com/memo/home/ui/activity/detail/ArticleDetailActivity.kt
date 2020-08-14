@@ -1,6 +1,7 @@
 package com.memo.home.ui.activity.detail
 
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.blankj.utilcode.util.LogUtils
 import com.memo.base.manager.router.RouterPath
 import com.memo.base.ui.mvvm.BaseActivity
 import com.memo.home.R
@@ -26,6 +27,7 @@ class ArticleDetailActivity : BaseActivity() {
 		id = intent.getIntExtra("id", id)
 		title = intent.getStringExtra("title") ?: title
 		url = intent.getStringExtra("url") ?: url
+		LogUtils.iTag("web", id, title, url)
 	}
 
 	private fun initView() {

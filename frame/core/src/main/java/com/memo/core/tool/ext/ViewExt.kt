@@ -1,17 +1,12 @@
 package com.memo.core.tool.ext
 
 import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
 import android.os.Build
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
-import android.widget.EditText
-import android.widget.ScrollView
-import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.recyclerview.widget.RecyclerView
+import androidx.core.view.drawToBitmap
 import com.blankj.utilcode.util.BarUtils
 import com.memo.core.tool.helper.ClickHelper
 
@@ -148,87 +143,12 @@ fun View.setVisible(visibleOrGone: Boolean) {
 }
 
 /**
- * 判断控件是否为Gone
- */
-val View.isGone: Boolean
-	get() {
-		return visibility == View.GONE
-	}
-
-/**
- * 判断控件是否为Visible
- */
-val View.isVisible: Boolean
-	get() {
-		return visibility == View.VISIBLE
-	}
-
-/**
- * 判断控件是否为InVisible
- */
-val View.isInvisible: Boolean
-	get() {
-		return visibility == View.INVISIBLE
-	}
-
-/**
  * 获取View的Bitmap
  * 支持RecyclerView ScrollView 基础控件 不支持ListView了
  * 注意:使用这个方法的时候必须要在View测量完毕之后才能进行
  */
 fun View.toBitmap(): Bitmap {
-	if (measuredWidth == 0 || measuredHeight == 0) {
-		throw RuntimeException("警告⚠️警告⚠️ 这个时候View还没有测量完毕")
-	}
-	return when (this) {
-		is RecyclerView -> {
-			this.scrollToPosition(0)
-			this.measure(
-				View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY),
-				View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
-			)
-
-			val screenshot = Bitmap.createBitmap(width, measuredHeight, Bitmap.Config.ARGB_8888)
-			val canvas = Canvas(screenshot)
-
-			if (background != null) {
-				background.setBounds(0, 0, width, measuredHeight)
-				background.draw(canvas)
-			} else {
-				canvas.drawColor(Color.WHITE)
-			}
-			this.draw(canvas)
-			this.measure(
-				View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY),
-				View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.AT_MOST)
-			)
-			screenshot
-		}
-		is ScrollView -> {
-			var totalHeight = 0
-			for (i in 0 until this.childCount) {
-				totalHeight += this.getChildAt(i).height
-			}
-			val screenshot =
-				Bitmap.createBitmap(this.getWidth(), totalHeight, Bitmap.Config.RGB_565)
-			val canvas = Canvas(screenshot)
-			this.draw(canvas)
-			screenshot
-		}
-		else -> {
-			val screenshot =
-				Bitmap.createBitmap(measuredWidth, measuredHeight, Bitmap.Config.RGB_565)
-			val canvas = Canvas(screenshot)
-			if (background != null) {
-				background.setBounds(0, 0, width, measuredHeight)
-				background.draw(canvas)
-			} else {
-				canvas.drawColor(Color.WHITE)
-			}
-			draw(canvas)
-			screenshot
-		}
-	}
+	return this.drawToBitmap()
 }
 
 /**
@@ -309,34 +229,6 @@ fun View.marginStatusBar() {
 }
 
 
-// ---------------------------------------- TextView ----------------------------------------
-
-/**
- * 安全的设置控件文字
- */
-var TextView.value: String
-	get() = this.text?.toString()?.trim() ?: ""
-	set(value) {
-		this.text = value
-	}
-
-/**
- * 清除控件文字
- */
-fun TextView.clear() {
-	this.value = ""
-}
-
-/**
- * 设置EditText是否可输入
- */
-fun EditText.editable(enable: Boolean) {
-	this.isClickable = enable
-	this.isEnabled = enable
-	this.isFocusable = enable
-	this.isFocusableInTouchMode = enable
-	if (enable) requestFocus()
-}
 
 
 

@@ -9,7 +9,7 @@ import com.memo.base.utils.IconHelper
 import com.memo.core.tool.adapter.BaseRecyclerAdapter
 import com.memo.core.tool.ext.color
 import com.memo.core.tool.ext.fromHtml
-import com.memo.core.tool.helper.ImageLoadHelper
+import com.memo.core.tool.helper.GlideHelper
 
 /**
  * title:
@@ -64,7 +64,7 @@ class ArticleAdapter(private val enableSwipe: Boolean = false) : BaseRecyclerAda
 			)
 		holder.getView<SwipeLayout>(R.id.mSwipeLayout).isSwipeEnabled = enableSwipe
 		if (showPic) {
-			ImageLoadHelper.loadImage(context, item.envelopePic, holder.getView(R.id.mIvPic))
+			GlideHelper.loadImage(item.envelopePic, holder.getView(R.id.mIvPic))
 		}
 	}
 }

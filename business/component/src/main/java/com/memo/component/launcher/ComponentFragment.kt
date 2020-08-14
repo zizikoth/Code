@@ -14,6 +14,7 @@ import com.memo.component.ui.kickout.KickOutActivity
 import com.memo.component.ui.motionlayout.MotionLayout1Activity
 import com.memo.component.ui.motionlayout.MotionLayout2Activity
 import com.memo.component.ui.motionlayout.MotionLayout3Activity
+import com.memo.component.ui.share.ShareElementListActivity
 import com.memo.core.tool.dialog.dialog.BottomGridDialog
 import com.memo.core.tool.dialog.dialog.BottomListDialog
 import com.memo.core.tool.dialog.dialog.LoadingDialog
@@ -71,6 +72,7 @@ class ComponentFragment : BaseFragment() {
 			"LiveEventBus",
 			"KickOut踢出弹窗",
 			"DownLoad",
+			"共享元素",
 			"Dialog"
 		)
 	}
@@ -102,6 +104,7 @@ class ComponentFragment : BaseFragment() {
 				"LiveEventBus" -> startActivity<BusSubscribeActivity>()
 				"KickOut踢出弹窗" -> startActivity<KickOutActivity>()
 				"DownLoad" -> startActivity<DownLoadActivity>()
+				"共享元素" -> startActivity<ShareElementListActivity>()
 				"Dialog" -> {
 					when (dialogIndex++ % 5) {
 						0 -> {

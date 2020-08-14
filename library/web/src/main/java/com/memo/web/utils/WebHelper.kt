@@ -47,14 +47,17 @@ class WebHelper : LifecycleObserver {
 		val settings = webView.settings
 		//去除过度拉伸效果
 		webView.overScrollMode = WebView.OVER_SCROLL_NEVER
+		//允许缓存
+		settings.domStorageEnabled = true
 		//适应屏幕
 		settings.loadWithOverviewMode = true
+		//允许js交互
+		settings.javaScriptEnabled = true
 		//启动双指放大
 		settings.setSupportZoom(true)
 		settings.builtInZoomControls = true
 		settings.displayZoomControls = false
-		//允许js交互
-		settings.javaScriptEnabled = true
+
 		//适配5.0不允许http和https混合使用情况
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			settings.mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_ALWAYS_ALLOW

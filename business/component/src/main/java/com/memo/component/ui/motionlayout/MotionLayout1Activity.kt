@@ -2,7 +2,7 @@ package com.memo.component.ui.motionlayout
 
 import com.memo.base.ui.mvvm.BaseActivity
 import com.memo.component.R
-import com.memo.core.tool.helper.ImageLoadHelper
+import com.memo.core.tool.helper.GlideHelper
 import kotlinx.android.synthetic.main.activity_motion_layout_1.*
 
 class MotionLayout1Activity : BaseActivity() {
@@ -16,7 +16,7 @@ class MotionLayout1Activity : BaseActivity() {
 	override fun bindLayoutRes(): Int = R.layout.activity_motion_layout_1
 
 	override fun initialize() {
-		ImageLoadHelper.loadRoundImage(mContext, imageUrl, 10, mIvCover)
+		GlideHelper.loadRoundImage(imageUrl, 10, mIvCover)
 		mTvIntroduction.text = introduction
 		mTvLife.text = life
 	}

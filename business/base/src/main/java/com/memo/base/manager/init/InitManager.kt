@@ -3,6 +3,7 @@ package com.memo.base.manager.init
 import android.app.Application
 import androidx.core.content.ContextCompat
 import com.alibaba.android.arouter.launcher.ARouter
+import com.blankj.utilcode.util.CrashUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ProcessUtils
 import com.blankj.utilcode.util.Utils
@@ -17,6 +18,7 @@ import com.memo.base.status.callback.LoadingCallback
 import com.memo.base.status.callback.NetErrorCallback
 import com.memo.base.status.callback.ServerErrorCallback
 import com.memo.core.tool.app.BaseApp
+import com.memo.core.tool.dir.LocalDir
 import com.memo.core.tool.ext.dimen
 import com.scwang.smart.refresh.footer.BallPulseFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
@@ -62,6 +64,10 @@ object InitManager {
 	@JvmStatic
 	fun initLater() {
 		if (!isInitLater) {
+			//Crash
+			CrashUtils.init(LocalDir.CACHE_DIR_LOG) { info, error ->
+				LogUtils.eTag("Crash", info, error)
+			}
 			// LoadSir
 			LoadSir.beginBuilder()
 				.addCallback(LoadingCallback())

@@ -5,4 +5,8 @@
 	<string name="MenuCircle">圈子</string>
 	<string name="MenuFind">发现</string>
 	<string name="MenuMine">我的</string>
+	
+	<string name="ShareElementCover">cover</string>
+	<string name="ShareElementTitle">title</string>
+	<string name="ShareElementContent">content</string>
 </resources>

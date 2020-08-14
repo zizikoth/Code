@@ -45,7 +45,7 @@ object OOMHelper {
 					.append("shouldCleanMemory = $shouldCleanMemory")
 				LogUtils.iTag("Memory", checkResult)
 				if (shouldCleanMemory) {
-					ImageLoadHelper.clearMemoryCache()
+					GlideHelper.clearMemoryCache()
 				}
 				lowMemoryMonitorHandler.postDelayed(this, delayMillis)
 			}

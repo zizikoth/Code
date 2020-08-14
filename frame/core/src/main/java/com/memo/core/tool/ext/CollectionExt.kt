@@ -82,3 +82,10 @@ fun <T> Array<T>.convert2String(split: String = ","): String {
 	}
 	return sb.toString()
 }
+
+/**
+ * 简单forEach
+ */
+fun Int.forEach(action: (Int) -> Unit) {
+	(0..this).forEach(action)
+}
