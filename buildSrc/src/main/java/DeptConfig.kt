@@ -10,7 +10,7 @@
  */
 object Versions {
 	const val Gradle = "4.0.0"
-	const val Kotlin = "1.3.72"
+	const val Kotlin = "1.4.10"
 	const val ARouterRegister = "1.0.2"
 
 	const val Junit = "4.13"
