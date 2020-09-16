@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.memo.component.ui.file.FileActivity">
+	
+	<com.memo.core.widget.titleview.TitleView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:title_title_text="创建文件夹" />
+	
+	<Button
+		android:id="@+id/mBtnFile"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="android O 创建文件"
+		android:textColor="@color/textDark"
+		android:textSize="@dimen/sp16" />
+	
+	<Button
+		android:id="@+id/mBtnDelete"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="android O 删除文件"
+		android:textColor="@color/textDark"
+		android:textSize="@dimen/sp16" />
+</LinearLayout>

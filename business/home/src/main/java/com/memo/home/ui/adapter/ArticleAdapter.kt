@@ -6,7 +6,7 @@ import com.daimajia.swipe.SwipeLayout
 import com.memo.base.R
 import com.memo.base.entity.remote.ArticleResponse
 import com.memo.base.utils.IconHelper
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import com.memo.core.tool.ext.color
 import com.memo.core.tool.ext.fromHtml
 import com.memo.core.tool.helper.GlideHelper
@@ -21,7 +21,7 @@ import com.memo.core.tool.helper.GlideHelper
  *
  * Talk is cheap, Show me the code.
  */
-class ArticleAdapter(private val enableSwipe: Boolean = false) : BaseRecyclerAdapter<ArticleResponse>(R.layout.layout_item_article) {
+class ArticleAdapter(private val enableSwipe: Boolean = false) : BaseRVAdapter<ArticleResponse>(R.layout.layout_item_article) {
 
 	init {
 		addChildClickViewIds(R.id.mClContent, R.id.mFlDelete)

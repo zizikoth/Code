@@ -19,12 +19,7 @@ class HeaderInterceptor(private val headers: Map<String, String>? = null) : Inte
 	override fun intercept(chain: Interceptor.Chain): Response {
 		val builder = chain.request()
 			.newBuilder()
-		if (headers != null && headers.isNotEmpty()) {
-			val keys = headers.keys
-			for (headerKey in keys) {
-				headers[headerKey]?.let { builder.addHeader(headerKey, it).build() }
-			}
-		}
+		headers?.forEach { builder.addHeader(it.key, it.value) }
 		return chain.proceed(builder.build())
 	}
 

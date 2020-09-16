@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import com.memo.core.tool.dialog.dialog.BaseBottomSheetDialog
 import com.memo.core.tool.ext.dimen
 import kotlinx.android.synthetic.main.dialog_action_bottom_sheet.view.*
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.dialog_action_bottom_sheet.view.*
 class ActionBottomSheetDialog : BaseBottomSheetDialog() {
 
 	private val mAdapter by lazy {
-		object : BaseRecyclerAdapter<String>(R.layout.item_multi_text) {
+		object : BaseRVAdapter<String>(R.layout.item_multi_text) {
 			override fun convert(holder: BaseViewHolder, item: String) {
 				holder.setText(R.id.tv_title, item)
 			}

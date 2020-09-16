@@ -10,6 +10,8 @@ import com.memo.component.ui.bottomsheet.ActionBottomSheetDialog
 import com.memo.component.ui.bottomsheet.BottomSheetActivity
 import com.memo.component.ui.bus.BusSubscribeActivity
 import com.memo.component.ui.download.DownLoadActivity
+import com.memo.component.ui.file.FileActivity
+import com.memo.component.ui.fold.FoldActivity
 import com.memo.component.ui.kickout.KickOutActivity
 import com.memo.component.ui.motionlayout.MotionLayout1Activity
 import com.memo.component.ui.motionlayout.MotionLayout2Activity
@@ -73,7 +75,9 @@ class ComponentFragment : BaseFragment() {
 			"KickOut踢出弹窗",
 			"DownLoad",
 			"共享元素",
-			"Dialog"
+			"Dialog",
+			"File",
+			"Fold"
 		)
 	}
 
@@ -117,7 +121,10 @@ class ComponentFragment : BaseFragment() {
 						4 -> mActionDialog.show(childFragmentManager)
 					}
 				}
+				"File" -> startActivity<FileActivity>()
+				"Fold" -> startActivity<FoldActivity>()
 			}
 		}
 	}
+
 }

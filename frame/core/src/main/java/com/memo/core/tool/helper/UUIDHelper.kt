@@ -26,6 +26,7 @@ object UUIDHelper {
 	/**
 	 * 通过刷机是可以改变数据的
 	 * 恢复出厂设置AndroidId变化
+	 * 只要不换手机就不一样
 	 */
 	fun getUUID(): String {
 		if (uuid.isEmpty()) {
@@ -40,7 +41,8 @@ object UUIDHelper {
 				uuid = StringBuilder()
 					.append(Build.BOARD).append(Build.BRAND)
 					.append(Build.DEVICE).append(Build.DISPLAY)
-					.append(Build.FINGERPRINT).append(Build.HOST)
+					.append(Build.FINGERPRINT)
+					.append(Build.HARDWARE).append(Build.HOST)
 					.append(Build.MANUFACTURER).append(Build.MODEL)
 					.append(Build.PRODUCT).append(Build.TAGS)
 					.append(Build.TYPE).append(Build.USER)
@@ -49,6 +51,17 @@ object UUIDHelper {
 					.toString()
 			}
 			uuid = uuid.md5()
+		}
+		return uuid
+	}
+
+
+	/**
+	 * 应用只要不卸载那么这个值是保持唯一的
+	 */
+	fun getUDID(): String {
+		if (uuid.isEmpty()) {
+			uuid = DeviceUtils.getUniqueDeviceId()
 		}
 		return uuid
 	}

@@ -23,6 +23,7 @@ public class DimenGenerator {
 	private static final int DESIGN_HEIGHT = 667;
 
 	public static void main(String[] args) {
+		// 如果无法运行 在idea/gradle.xml <GradleProjectSettings>第一行加入<option name="delegatedBuild" value="false" />
 		//     求得最小宽度
 		int smallest = DESIGN_WIDTH > DESIGN_HEIGHT ? DESIGN_HEIGHT : DESIGN_WIDTH;
 		DimenTypes[] values = DimenTypes.values();

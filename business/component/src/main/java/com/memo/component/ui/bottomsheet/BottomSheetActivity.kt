@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.memo.base.ui.mvvm.BaseActivity
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 
 class BottomSheetActivity : BaseActivity() {
@@ -21,7 +21,7 @@ class BottomSheetActivity : BaseActivity() {
 	)
 
 	private val mListAdapter by lazy {
-		object : BaseRecyclerAdapter<String>(R.layout.layout_item_looper_text) {
+		object : BaseRVAdapter<String>(R.layout.layout_item_looper_text) {
 			override fun convert(holder: BaseViewHolder, item: String) {
 				(holder.itemView as TextView).text = item
 			}
@@ -29,7 +29,7 @@ class BottomSheetActivity : BaseActivity() {
 	}
 
 	private val mDataAdapter by lazy {
-		object : BaseRecyclerAdapter<String>(R.layout.layout_item_looper_text) {
+		object : BaseRVAdapter<String>(R.layout.layout_item_looper_text) {
 			override fun convert(holder: BaseViewHolder, item: String) {
 				(holder.itemView as TextView).text = item
 			}

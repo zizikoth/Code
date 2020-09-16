@@ -24,7 +24,7 @@ object Versions {
 	const val BaseRecyclerViewAdapterHelper = "3.0.4"
 	const val BannerViewPager = "3.1.5"
 	const val CardView = "1.0.0"
-	const val ConstraintLayout = "2.0.0-beta7"
+	const val ConstraintLayout = "2.0.1"
 	const val Coroutine = "1.3.3"
 	const val Glide = "4.11.0"
 	const val LoadSir = "1.3.6"

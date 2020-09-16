@@ -11,8 +11,26 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/BaseTheme"
+		android:usesCleartextTraffic="true"
 		tools:ignore="AllowBackup">
-		<activity android:name=".ui.share.ShareElementListActivity"></activity>
+		<activity android:name=".ui.fold.FoldActivity" />
+		<activity
+			android:name=".ui.file.FileActivity"
+			android:exported="true">
+			<intent-filter>
+				<data
+					android:host="scheme"
+					android:path="/SchemeActivity"
+					android:scheme="memo" />
+				
+				<category android:name="android.intent.category.DEFAULT" />
+				
+				<action android:name="android.intent.action.VIEW" />
+				
+				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".ui.share.ShareElementListActivity" />
 		<activity android:name=".ui.share.ShareElementActivity" />
 		<activity android:name=".launcher.MainActivity">
 			<intent-filter>

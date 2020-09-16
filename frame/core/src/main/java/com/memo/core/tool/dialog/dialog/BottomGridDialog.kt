@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.core.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import com.memo.core.tool.ext.onClick
 import kotlinx.android.synthetic.main.dialog_bottom_list.view.*
 
@@ -27,8 +27,8 @@ class BottomGridDialog(private val mData: ArrayList<GridItem> = arrayListOf()) :
 
 	class GridItem(var drawableSrc: Int, var name: String)
 
-	private val mAdapter: BaseRecyclerAdapter<GridItem> =
-		object : BaseRecyclerAdapter<GridItem>(R.layout.dialog_bottom_grid_item) {
+	private val mAdapter: BaseRVAdapter<GridItem> =
+		object : BaseRVAdapter<GridItem>(R.layout.dialog_bottom_grid_item) {
 			override fun convert(holder: BaseViewHolder, item: GridItem) {
 				val itemView: TextView = holder.itemView as TextView
 				itemView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, item.drawableSrc, 0, 0)

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="base_dpi">400dp</string>
 	<dimen name="dp0_5">0.53dp</dimen>
 	<dimen name="dp2_5">2.67dp</dimen>
 	<dimen name="dp7_5">8.00dp</dimen>
@@ -798,5 +799,4 @@
 	<dimen name="sp38">40.53sp</dimen>
 	<dimen name="sp39">41.60sp</dimen>
 	<dimen name="sp40">42.67sp</dimen>
-	<string name="base_dpi">400dp</string>
 </resources>

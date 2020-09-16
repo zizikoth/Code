@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.core.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import com.memo.core.tool.ext.onClick
 import kotlinx.android.synthetic.main.dialog_bottom_list.view.*
 
@@ -24,8 +24,8 @@ import kotlinx.android.synthetic.main.dialog_bottom_list.view.*
 class BottomListDialog(private val data: ArrayList<String> = arrayListOf()) : BaseDialog() {
 
 	/*** 适配器 ***/
-	private val mAdapter: BaseRecyclerAdapter<String> =
-		object : BaseRecyclerAdapter<String>(R.layout.dialog_bottom_list_item) {
+	private val mAdapter: BaseRVAdapter<String> =
+		object : BaseRVAdapter<String>(R.layout.dialog_bottom_list_item) {
 			override fun convert(holder: BaseViewHolder, item: String) {
 				holder.setText(R.id.mTvContent, item)
 					.setGone(R.id.mLine, holder.adapterPosition != data.size)

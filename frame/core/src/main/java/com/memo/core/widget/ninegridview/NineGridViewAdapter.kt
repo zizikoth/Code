@@ -3,7 +3,7 @@ package com.memo.core.widget.ninegridview
 import androidx.annotation.DrawableRes
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.core.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 import com.memo.core.tool.helper.GlideHelper
 
 /**
@@ -13,7 +13,7 @@ import com.memo.core.tool.helper.GlideHelper
  * @author zhou
  * @date 2019-06-05 15:59
  */
-class NineGridViewAdapter : BaseRecyclerAdapter<Any>(R.layout.item_nine_grid_view) {
+class NineGridViewAdapter : BaseRVAdapter<Any>(R.layout.item_nine_grid_view) {
 
 
 	private var mAddDrawableRes: Int = R.drawable.ic_pic_add

@@ -18,7 +18,7 @@ import com.memo.core.tool.helper.ClickHelper
  * @author zhou
  * @date 2019-07-04 14:55
  */
-abstract class BaseRecyclerAdapter<T>(@LayoutRes layoutResInt: Int) :
+abstract class BaseRVAdapter<T>(@LayoutRes layoutResInt: Int) :
 	BaseQuickAdapter<T, BaseViewHolder>(layoutResInt) {
 
 	/*** 用户存储子RecyclerView的状态 ***/

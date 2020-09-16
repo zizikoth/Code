@@ -2,7 +2,7 @@ package com.memo.component.adapter
 
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRecyclerAdapter
+import com.memo.core.tool.adapter.BaseRVAdapter
 
 /**
  * title:
@@ -14,7 +14,7 @@ import com.memo.core.tool.adapter.BaseRecyclerAdapter
  *
  * Talk is cheap, Show me the code.
  */
-class StringAdapter : BaseRecyclerAdapter<String>(R.layout.dialog_bottom_list_item) {
+class StringAdapter : BaseRVAdapter<String>(R.layout.dialog_bottom_list_item) {
 	override fun convert(holder: BaseViewHolder, item: String) {
 		holder.setText(R.id.mTvContent, item)
 	}

@@ -9,7 +9,6 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
 import com.blankj.utilcode.util.BarUtils
-import com.blankj.utilcode.util.ScreenUtils
 import com.memo.base.R
 import com.memo.core.tool.dialog.dialog.LoadingDialog
 import com.memo.core.tool.ext.inflaterView
@@ -47,12 +46,6 @@ abstract class BaseActivity : AppCompatActivity() {
 	@ColorInt
 	protected open fun statusBarColor(): Int = Color.WHITE
 
-	/**
-	 * 当前Activity是否始终是竖屏 不会发生屏幕变化
-	 * false 一般配合 android:configChanges="keyboardHidden|orientation|screenSize"
-	 */
-	protected open fun alwaysPortrait(): Boolean = true
-
 	override fun onCreate(savedInstanceState: Bundle?) {
 		overridePendingTransition(R.anim.slide_in_from_right, R.anim.activity_fade_hide)
 		super.onCreate(savedInstanceState)
@@ -74,10 +67,6 @@ abstract class BaseActivity : AppCompatActivity() {
 			BarUtils.setStatusBarLightMode(this, false)
 			BarUtils.setStatusBarColor(this, statusBarColor(), true)
 			BarUtils.addMarginTopEqualStatusBarHeight(mRootView)
-		}
-		// 设置是否始终竖屏
-		if (alwaysPortrait()) {
-			ScreenUtils.setPortrait(this)
 		}
 	}
 
