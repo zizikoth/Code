@@ -10,7 +10,6 @@ android {
 		targetSdkVersion Config.targetSdkVersion
 		versionCode Config.versionCode
 		versionName Config.versionName
-		multiDexEnabled true
 	}
 
 	compileOptions {

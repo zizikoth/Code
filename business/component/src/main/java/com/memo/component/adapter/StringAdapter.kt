@@ -2,7 +2,7 @@ package com.memo.component.adapter
 
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRVAdapter
+import com.memo.core.tool.adapter.rv.BaseRVAdapter
 
 /**
  * title:

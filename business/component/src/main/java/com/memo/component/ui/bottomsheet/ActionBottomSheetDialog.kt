@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRVAdapter
+import com.memo.core.tool.adapter.rv.BaseRVAdapter
 import com.memo.core.tool.dialog.dialog.BaseBottomSheetDialog
 import com.memo.core.tool.ext.dimen
 import kotlinx.android.synthetic.main.dialog_action_bottom_sheet.view.*

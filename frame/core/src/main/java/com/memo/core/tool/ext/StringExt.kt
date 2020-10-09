@@ -58,7 +58,7 @@ fun String.md5(): String = EncryptUtils.encryptMD5ToString(this)
  * 判断字符串是否为空或者是null的任意变化
  * 曾经出现过后台返回"Null" 然后判断isNullOrEmpty()通过 显示在界面上的时候悲剧了
  */
-fun String?.isNull() = isNullOrEmpty() || this!!.trim().toLowerCase(Locale.getDefault()) == "null"
+fun String?.isNull() = isNullOrEmpty() || this.trim().toLowerCase(Locale.getDefault()) == "null"
 
 /**
  * Html格式化
@@ -96,10 +96,8 @@ fun Double.keep2Decimal(): String {
 /**
  * 换行
  */
-fun StringBuilder.lineBreak(line: Int) {
-	foreach(line) {
-		this.append("\n")
-	}
+fun StringBuilder.lineBreak() {
+	this.append("\n")
 }
 
 

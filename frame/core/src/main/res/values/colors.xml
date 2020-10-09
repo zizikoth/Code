@@ -8,6 +8,7 @@
 	<color name="black">#000000</color>
 	<color name="transparent">#00000000</color>
 	<color name="color_red">#FE4365</color>
+	<color name="color_blue">#1E90FF</color>
 	
 	<color name="textLight">#999999</color>
 	<color name="textNormal">#666666</color>

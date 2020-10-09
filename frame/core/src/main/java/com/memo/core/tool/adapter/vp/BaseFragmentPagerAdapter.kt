@@ -1,4 +1,4 @@
-package com.memo.core.tool.adapter
+package com.memo.core.tool.adapter.vp
 
 import android.annotation.SuppressLint
 import androidx.fragment.app.Fragment

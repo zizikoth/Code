@@ -3,7 +3,7 @@ package com.memo.core.widget.ninegridview
 import androidx.annotation.DrawableRes
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.memo.core.R
-import com.memo.core.tool.adapter.BaseRVAdapter
+import com.memo.core.tool.adapter.rv.BaseRVAdapter
 import com.memo.core.tool.helper.GlideHelper
 
 /**

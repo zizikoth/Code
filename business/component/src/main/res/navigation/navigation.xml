@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/navigation"
+	
+	app:startDestination="@id/oneFragment">
+	
+	<fragment
+		android:id="@+id/oneFragment"
+		android:name="com.memo.component.ui.navigation.OneFragment"
+		android:label="OneFragment"
+		tools:layout="@layout/fragment_one">
+		<action
+			android:id="@+id/action_oneFragment_to_twoFragment"
+			app:destination="@id/twoFragment"
+			app:enterAnim="@anim/slide_in_from_right"
+			app:exitAnim="@anim/activity_fade_hide"
+			app:popEnterAnim="@anim/activity_fade_show"
+			app:popExitAnim="@anim/slide_out_to_right" />
+	</fragment>
+	
+	<fragment
+		android:id="@+id/twoFragment"
+		android:name="com.memo.component.ui.navigation.TwoFragment"
+		android:label="TwoFragment"
+		tools:layout="@layout/fragment_two">
+		<action
+			android:id="@+id/action_twoFragment_to_threeFragment"
+			app:destination="@id/threeFragment"
+			app:enterAnim="@anim/slide_in_from_right"
+			app:exitAnim="@anim/activity_fade_hide"
+			app:popEnterAnim="@anim/activity_fade_show"
+			app:popExitAnim="@anim/slide_out_to_right" />
+	</fragment>
+	
+	<fragment
+		android:id="@+id/threeFragment"
+		android:name="com.memo.component.ui.navigation.ThreeFragment"
+		android:label="ThreeFragment"
+		tools:layout="@layout/fragment_three">
+		<action
+			android:id="@+id/action_threeFragment_to_oneFragment"
+			app:destination="@id/oneFragment"
+			app:enterAnim="@anim/slide_in_from_right"
+			app:exitAnim="@anim/activity_fade_hide"
+			app:popEnterAnim="@anim/activity_fade_show"
+			app:popExitAnim="@anim/slide_out_to_right" />
+	</fragment>
+
+</navigation>

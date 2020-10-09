@@ -1,11 +1,8 @@
-@file:Suppress("DEPRECATION")
-
 package com.memo.core.tool.dir
 
 import com.blankj.utilcode.util.FileUtils
 import com.blankj.utilcode.util.LogUtils
 import com.memo.core.tool.app.BaseApp
-import com.memo.core.tool.helper.PermissionHelper
 
 /**
  * title:本地文件夹地址
@@ -39,20 +36,18 @@ object LocalDir {
 	 */
 	@JvmStatic
 	fun createLocalDir() {
-		PermissionHelper.grantedStorage(BaseApp.app) {
-			val dirCapture = FileUtils.createOrExistsDir(CACHE_DIR_CAPTURE)
-			val dirCompress = FileUtils.createOrExistsDir(CACHE_DIR_COMPRESS)
-			val dirCrop = FileUtils.createOrExistsDir(CACHE_DIR_CROP)
-			val dirFile = FileUtils.createOrExistsDir(CACHE_DIR_FILE)
-			val dirLog = FileUtils.createOrExistsDir(CACHE_DIR_LOG)
-			LogUtils.iTag(
-				"LocalDir",
-				"dirCapture = $dirCapture $CACHE_DIR_CAPTURE",
-				"dirCompress = $dirCompress $CACHE_DIR_COMPRESS",
-				"dirCrop = $dirCrop $CACHE_DIR_CROP",
-				"dirFile = $dirFile $CACHE_DIR_FILE",
-				"dirLog = $dirLog $CACHE_DIR_LOG"
-			)
-		}
+		val dirCaptureCreated = FileUtils.createOrExistsDir(CACHE_DIR_CAPTURE)
+		val dirCompressCreated = FileUtils.createOrExistsDir(CACHE_DIR_COMPRESS)
+		val dirCropCreated = FileUtils.createOrExistsDir(CACHE_DIR_CROP)
+		val dirFileCreated = FileUtils.createOrExistsDir(CACHE_DIR_FILE)
+		val dirLogCreated = FileUtils.createOrExistsDir(CACHE_DIR_LOG)
+		LogUtils.iTag(
+			"LocalDir",
+			"dirCapture = $dirCaptureCreated $CACHE_DIR_CAPTURE",
+			"dirCompress = $dirCompressCreated $CACHE_DIR_COMPRESS",
+			"dirCrop = $dirCropCreated $CACHE_DIR_CROP",
+			"dirFile = $dirFileCreated $CACHE_DIR_FILE",
+			"dirLog = $dirLogCreated $CACHE_DIR_LOG"
+		)
 	}
 }

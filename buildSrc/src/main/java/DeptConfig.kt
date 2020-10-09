@@ -9,7 +9,7 @@
  * Talk is cheap, Show me the code.
  */
 object Versions {
-	const val Gradle = "4.0.0"
+	const val Gradle = "4.0.2"
 	const val Kotlin = "1.4.10"
 	const val ARouterRegister = "1.0.2"
 
@@ -35,6 +35,7 @@ object Versions {
 	const val Matisse = "0.5.3-beta3"
 	const val Map3D = "7.5.0"
 	const val MapLocation = "5.0.0"
+	const val Navigation = "2.3.0"
 	const val PickerView = "4.1.8"
 	const val Qrcode = "1.3.7"
 	const val Retrofit = "2.8.1"
@@ -45,6 +46,8 @@ object Versions {
 	const val Transferee = "1.6.1"
 	const val Tab = "2.1.2"
 	const val UCrop = "2.2.3"
+	const val WorkManager = "2.3.4"
+	const val X5Web = "43939"
 
 	const val CoreKtx = "1.3.1"
 	const val Lifecycle = "2.2.0"
@@ -90,6 +93,8 @@ object DeptConfig {
 	const val Matisse = "com.zhihu.android:matisse:${Versions.Matisse}"
 	const val Map3D = "com.amap.api:3dmap:${Versions.Map3D}"
 	const val MapLocation = "com.amap.api:location:${Versions.MapLocation}"
+	const val NavigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.Navigation}"
+	const val NavigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.Navigation}"
 	const val Kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.Kotlin}"
 	const val PickerView = "com.contrarywind:Android-PickerView:${Versions.PickerView}"
 	const val QrCode = "cn.bingoogolapple:bga-qrcode-zxing:${Versions.Qrcode}"
@@ -105,6 +110,8 @@ object DeptConfig {
 	const val TransfereeGlide = "com.github.Hitomis.transferee:GlideImageLoader:${Versions.Transferee}"
 	const val FlycoTabLayout = "com.flyco.tablayout:FlycoTabLayout_Lib:${Versions.Tab}@aar"
 	const val UCrop = "com.github.yalantis:ucrop:${Versions.UCrop}"
+	const val WorkManager = "androidx.work:work-runtime-ktx:${Versions.WorkManager}"
+	const val x5web = "com.tencent.tbs.tbssdk:sdk:${Versions.X5Web}"
 
 	// lifecycle
 	const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.Lifecycle}"

@@ -6,7 +6,7 @@ import com.daimajia.swipe.SwipeLayout
 import com.memo.base.R
 import com.memo.base.entity.remote.ArticleResponse
 import com.memo.base.utils.IconHelper
-import com.memo.core.tool.adapter.BaseRVAdapter
+import com.memo.core.tool.adapter.rv.BaseRVAdapter
 import com.memo.core.tool.ext.color
 import com.memo.core.tool.ext.fromHtml
 import com.memo.core.tool.helper.GlideHelper

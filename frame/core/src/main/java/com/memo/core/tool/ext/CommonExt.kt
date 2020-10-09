@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.view.Gravity
 import androidx.core.content.ContextCompat
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.memo.core.R
 import com.memo.core.tool.app.BaseApp
@@ -20,9 +21,10 @@ import kotlinx.android.synthetic.main.layout_toast.view.*
  * @author zhou
  * @date 2019-03-28 10:24
  */
+// ------------------------------- Log相关 -------------------------------//
+fun log(tag: String, vararg any: Any) = LogUtils.iTag(tag, any)
 
 // ------------------------------- Toast相关 -------------------------------//
-
 fun toast(message: Any?) {
 	message?.let {
 		if (it.toString().isNotEmpty()) {
@@ -126,10 +128,3 @@ fun tryCatch(tryToDo: () -> Unit, catchToDo: (Exception) -> Unit = {}) {
 	}
 }
 
-
-//---------------------------------------- 循环 ----------------------------------------
-fun foreach(index: Int, loop: () -> Unit) {
-	for (i in 0..index) {
-		loop()
-	}
-}

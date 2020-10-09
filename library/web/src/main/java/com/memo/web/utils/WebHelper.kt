@@ -44,13 +44,16 @@ class WebHelper : LifecycleObserver {
 			.go(httpUrl)
 
 		val webView = agentWeb.webCreator.webView
-		val settings = webView.settings
+		val settings = agentWeb.agentWebSettings.webSettings
 		//去除过度拉伸效果
 		webView.overScrollMode = WebView.OVER_SCROLL_NEVER
+		//先加载网页后加载图片
+		settings.blockNetworkImage = false
 		//允许缓存
 		settings.domStorageEnabled = true
 		//适应屏幕
 		settings.loadWithOverviewMode = true
+		settings.useWideViewPort = true
 		//允许js交互
 		settings.javaScriptEnabled = true
 		//启动双指放大

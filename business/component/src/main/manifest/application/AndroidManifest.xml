@@ -13,6 +13,11 @@
 		android:theme="@style/BaseTheme"
 		android:usesCleartextTraffic="true"
 		tools:ignore="AllowBackup">
+		<activity android:name=".ui.web.WebActivity"></activity>
+		<activity android:name=".ui.clip.ClipPaddingActivity" />
+		<activity android:name=".ui.vp2.ViewPager2Activity" />
+		<activity android:name=".ui.navigation.NavigationActivity" />
+		<activity android:name=".ui.handler.HandlerActivity" />
 		<activity android:name=".ui.fold.FoldActivity" />
 		<activity
 			android:name=".ui.file.FileActivity"

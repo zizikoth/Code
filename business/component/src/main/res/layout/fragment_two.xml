@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:orientation="vertical"
+	tools:context="com.memo.component.ui.navigation.TwoFragment"
+	tools:ignore="HardcodedText">
+	
+	<TextView
+		android:id="@+id/mTvContent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="@dimen/dp20"
+		android:text="TwoFragment"
+		android:textSize="@dimen/sp18"
+		android:textStyle="bold" />
+	
+	<Button
+		android:id="@+id/mBtnThree"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="跳转ThreeFragment" />
+	
+	<Button
+		android:id="@+id/mBtnBack"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="返回并携带数据" />
+</LinearLayout>

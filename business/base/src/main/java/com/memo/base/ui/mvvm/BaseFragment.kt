@@ -25,10 +25,12 @@ abstract class BaseFragment : Fragment() {
 	protected lateinit var mRootView: View
 
 	/*** 上下文Activity ***/
-	protected val mContext by lazy { activity!! }
+	protected val mContext by lazy { requireActivity() }
 
 	/*** 标识 标识是否界面准备完毕 ***/
 	private var isPrepared: Boolean = false
+
+	protected val TAG = this.javaClass.simpleName
 
 	override fun onCreateView(
 		inflater: LayoutInflater,

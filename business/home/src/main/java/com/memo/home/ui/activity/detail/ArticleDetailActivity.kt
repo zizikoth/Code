@@ -27,6 +27,7 @@ class ArticleDetailActivity : BaseActivity() {
 		id = intent.getIntExtra("id", id)
 		title = intent.getStringExtra("title") ?: title
 		url = intent.getStringExtra("url") ?: url
+		url = "http://newspaper.hf365.com/hfrb/pc/layout/201904/04/node_A01.html"
 		LogUtils.iTag("web", id, title, url)
 	}
 

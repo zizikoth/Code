@@ -240,12 +240,11 @@ object PermissionHelper {
 		val tipDialog = TipDialog(
 			string(R.string.permission_title),
 			string(R.string.permission_denied_forever_message)
-		)
-			.setOnTipClickListener({
-				callback?.onPositive()
-			}, {
-				callback?.onNegative()
-			})
+		).setOnTipClickListener({
+			callback?.onPositive()
+		}, {
+			callback?.onNegative()
+		})
 		if (context is FragmentActivity) {
 			tipDialog.show(context.supportFragmentManager)
 		} else if (context is Fragment) {

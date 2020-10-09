@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.memo.base.ui.mvvm.BaseActivity
 import com.memo.component.R
-import com.memo.core.tool.adapter.BaseRVAdapter
+import com.memo.core.tool.adapter.rv.BaseRVAdapter
 import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 
 class BottomSheetActivity : BaseActivity() {

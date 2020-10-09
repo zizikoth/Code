@@ -1,4 +1,4 @@
-package com.memo.core.tool.adapter
+package com.memo.core.tool.adapter.rv
 
 import android.view.View
 import androidx.databinding.ViewDataBinding

@@ -72,7 +72,7 @@ open class BaseViewModel : ViewModel() {
 	}
 
 	fun <T> requestNoCheck(block: suspend () -> BaseResponse<T>) {
-		viewModelScope.launch(Dispatchers.IO) {
+		viewModelScope.launch {
 			try {
 				block.invoke()
 			} catch (e: Exception) {

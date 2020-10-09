@@ -1,5 +1,6 @@
 apply plugin: 'com.alibaba.arouter'
 buildscript {
+
     repositories {
         google()
         jcenter()

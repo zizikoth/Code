@@ -2,7 +2,6 @@ package com.memo.core.tool.ext
 
 import android.widget.EditText
 import android.widget.TextView
-import androidx.core.widget.addTextChangedListener
 
 /**
  * title:TextView 拓展
@@ -42,8 +41,3 @@ fun EditText.editable(enable: Boolean) {
 	if (enable) requestFocus()
 }
 
-fun EditText.watcher(onTextChanged: (String) -> Unit) {
-	this.addTextChangedListener {
-
-	}
-}

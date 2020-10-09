@@ -9,14 +9,18 @@ import com.memo.component.ui.bottom.BottomActivity
 import com.memo.component.ui.bottomsheet.ActionBottomSheetDialog
 import com.memo.component.ui.bottomsheet.BottomSheetActivity
 import com.memo.component.ui.bus.BusSubscribeActivity
+import com.memo.component.ui.clip.ClipPaddingActivity
 import com.memo.component.ui.download.DownLoadActivity
 import com.memo.component.ui.file.FileActivity
 import com.memo.component.ui.fold.FoldActivity
+import com.memo.component.ui.handler.HandlerActivity
 import com.memo.component.ui.kickout.KickOutActivity
 import com.memo.component.ui.motionlayout.MotionLayout1Activity
 import com.memo.component.ui.motionlayout.MotionLayout2Activity
 import com.memo.component.ui.motionlayout.MotionLayout3Activity
+import com.memo.component.ui.navigation.NavigationActivity
 import com.memo.component.ui.share.ShareElementListActivity
+import com.memo.component.ui.vp2.ViewPager2Activity
 import com.memo.core.tool.dialog.dialog.BottomGridDialog
 import com.memo.core.tool.dialog.dialog.BottomListDialog
 import com.memo.core.tool.dialog.dialog.LoadingDialog
@@ -77,7 +81,11 @@ class ComponentFragment : BaseFragment() {
 			"共享元素",
 			"Dialog",
 			"File",
-			"Fold"
+			"Fold",
+			"Handler",
+			"Navigation",
+			"ViewPager2",
+			"ClipToPadding"
 		)
 	}
 
@@ -123,6 +131,10 @@ class ComponentFragment : BaseFragment() {
 				}
 				"File" -> startActivity<FileActivity>()
 				"Fold" -> startActivity<FoldActivity>()
+				"Handler" -> startActivity<HandlerActivity>()
+				"Navigation" -> startActivity<NavigationActivity>()
+				"ViewPager2" -> startActivity<ViewPager2Activity>()
+				"ClipToPadding" -> startActivity<ClipPaddingActivity>()
 			}
 		}
 	}
