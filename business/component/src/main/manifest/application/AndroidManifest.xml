@@ -13,7 +13,6 @@
 		android:theme="@style/BaseTheme"
 		android:usesCleartextTraffic="true"
 		tools:ignore="AllowBackup">
-		<activity android:name=".ui.web.WebActivity"></activity>
 		<activity android:name=".ui.clip.ClipPaddingActivity" />
 		<activity android:name=".ui.vp2.ViewPager2Activity" />
 		<activity android:name=".ui.navigation.NavigationActivity" />
@@ -55,9 +54,10 @@
 		<activity
 			android:name=".ui.kickout.KickOutActivity"
 			android:theme="@style/kick_out_dialog_activity" />
-		<activity android:name=".ui.download.DownLoadActivity" />
+		<activity android:name=".ui.update.UpdateActivity" />
 		
-		<service android:name=".ui.download.DownLoadService" />
+		<service android:name=".ui.update.UpdateService" />
+		<service android:name=".ui.file.DownloadService" />
 	</application>
 
 </manifest>

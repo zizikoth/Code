@@ -5,7 +5,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".ui.download.DownLoadActivity">
+	tools:context=".ui.update.UpdateActivity">
 	
 	<com.memo.core.widget.titleview.TitleView
 		android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 		android:id="@+id/mBtnService"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="使用WorkManager下载" />
+		android:text="使用IntentService下载" />
 	
 	<TextView
 		android:id="@+id/mTvProgress"

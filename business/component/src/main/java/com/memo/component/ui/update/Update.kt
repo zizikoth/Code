@@ -1,4 +1,4 @@
-package com.memo.component.ui.download
+package com.memo.component.ui.update
 
 import android.app.IntentService
 import android.content.Intent
@@ -33,27 +33,27 @@ interface OnProgressListener {
 	fun onFinish(file: File)
 }
 
-interface DownLoadApi {
+interface UpdateApi {
 	@Streaming
 	@GET
-	suspend fun download(@Url url: String): ResponseBody
+	suspend fun update(@Url url: String): ResponseBody
 }
 
-class DownloadManager {
+class UpdateManager {
 
 	companion object {
 		fun get() = Holder.instance
 	}
 
 	private object Holder {
-		val instance = DownloadManager()
+		val instance = UpdateManager()
 	}
 
 	private var listener: OnProgressListener? = null
 
-	fun start(url: String, path: String, name: String, listener: OnProgressListener) {
+	fun update(url: String, path: String, name: String, listener: OnProgressListener) {
 		this.listener = listener
-		DownLoadService.start(url, path, name)
+		UpdateService.start(url, path, name)
 	}
 
 	fun saveFile(responseBody: ResponseBody, destFileDir: String, destFileName: String) {
@@ -88,33 +88,33 @@ class DownloadManager {
 }
 
 @Suppress("DEPRECATION")
-class DownLoadService : IntentService("DownLoadService") {
+class UpdateService : IntentService("UpdateService") {
 
 	companion object {
-		const val DownUrl = "DOWN_URL"
-		const val DownName = "DOWN_NAME"
-		const val DownPath = "DOWN_PATH"
+		const val UpdateUrl = "UPDATE_URL"
+		const val UpdateName = "UPDATE_NAME"
+		const val UpdatePath = "UPDATE_PATH"
 		fun start(url: String, path: String, name: String) {
 			val context = BaseApp.app.applicationContext
 			context.startService(
-				Intent(context, DownLoadService::class.java)
-					.putExtra(DownUrl, url)
-					.putExtra(DownPath, path)
-					.putExtra(DownName, name)
+				Intent(context, UpdateService::class.java)
+					.putExtra(UpdateUrl, url)
+					.putExtra(UpdatePath, path)
+					.putExtra(UpdateName, name)
 			)
 		}
 	}
 
 	override fun onHandleIntent(intent: Intent?) {
 		intent?.let {
-			val url = it.getStringExtra(DownUrl)
-			val path = it.getStringExtra(DownPath)
-			val name = it.getStringExtra(DownName)
-			LogUtils.iTag("download", "url = $url\npath = $path\nname = $name")
+			val url = it.getStringExtra(UpdateUrl)
+			val path = it.getStringExtra(UpdatePath)
+			val name = it.getStringExtra(UpdateName)
+			LogUtils.iTag("update", "url = $url\npath = $path\nname = $name")
 			if (!url.isNullOrEmpty() && !path.isNullOrEmpty() && !name.isNullOrEmpty()) {
 				GlobalScope.launch(Dispatchers.IO) {
-					val responseBody = RetrofitManager.create(DownLoadApi::class.java).download(url)
-					DownloadManager.get().saveFile(responseBody, path, name)
+					val responseBody = RetrofitManager.create(UpdateApi::class.java).update(url)
+					UpdateManager.get().saveFile(responseBody, path, name)
 				}
 			}
 		}

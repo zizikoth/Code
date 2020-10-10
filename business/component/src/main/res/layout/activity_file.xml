@@ -17,7 +17,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="android O 创建文件"
+		android:text="android O 创建 Download/cache/aaa.jpg"
 		android:textColor="@color/textDark"
 		android:textSize="@dimen/sp16" />
 	
@@ -26,7 +26,27 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="android O 删除文件"
+		android:text="android O 删除 Download/cache/aaa.jpg"
 		android:textColor="@color/textDark"
 		android:textSize="@dimen/sp16" />
+	
+	<Button
+		android:id="@+id/mBtn2Download"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="android O 下载网络文件到Download文件夹"
+		android:textColor="@color/textDark"
+		android:textSize="@dimen/sp16" />
+	
+	<TextView
+		android:id="@+id/mTvProgress"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp20"
+		android:gravity="center"
+		android:text="下载文件的进度"
+		android:textSize="@dimen/sp16" />
+
+
 </LinearLayout>
