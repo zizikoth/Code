@@ -9,12 +9,12 @@
  * Talk is cheap, Show me the code.
  */
 object Versions {
-	const val Gradle = "4.0.2"
+	const val Gradle = "4.1.0"
 	const val Kotlin = "1.4.10"
 	const val ARouterRegister = "1.0.2"
 
 	const val Junit = "4.13"
-	const val TestJunit = "1.1.1"
+	const val TestJunit = "1.1.2"
 	const val TestEspresso = "3.2.0"
 
 	const val AppCompat = "1.2.0"
@@ -24,7 +24,7 @@ object Versions {
 	const val BaseRecyclerViewAdapterHelper = "3.0.4"
 	const val BannerViewPager = "3.1.5"
 	const val CardView = "1.0.0"
-	const val ConstraintLayout = "2.0.1"
+	const val ConstraintLayout = "2.0.2"
 	const val Coroutine = "1.3.3"
 	const val Glide = "4.11.0"
 	const val LoadSir = "1.3.6"
@@ -46,13 +46,12 @@ object Versions {
 	const val Transferee = "1.6.1"
 	const val Tab = "2.1.2"
 	const val UCrop = "2.2.3"
-	const val WorkManager = "2.3.4"
 	const val X5Web = "43939"
 
 	const val CoreKtx = "1.3.1"
 	const val Lifecycle = "2.2.0"
 
-	const val DoKit = "3.1.6"
+	const val DoKit = "3.2.0"
 
 	const val ARouterCompiler = "1.2.2"
 }
@@ -110,7 +109,6 @@ object DeptConfig {
 	const val TransfereeGlide = "com.github.Hitomis.transferee:GlideImageLoader:${Versions.Transferee}"
 	const val FlycoTabLayout = "com.flyco.tablayout:FlycoTabLayout_Lib:${Versions.Tab}@aar"
 	const val UCrop = "com.github.yalantis:ucrop:${Versions.UCrop}"
-	const val WorkManager = "androidx.work:work-runtime-ktx:${Versions.WorkManager}"
 	const val x5web = "com.tencent.tbs.tbssdk:sdk:${Versions.X5Web}"
 
 	// lifecycle

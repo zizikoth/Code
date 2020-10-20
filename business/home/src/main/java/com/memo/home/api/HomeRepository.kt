@@ -25,11 +25,11 @@ object HomeRepository {
 	 */
 	suspend fun getHomeData(page: Int): BaseResponse<HomeZipResponse> {
 		return withContext(Dispatchers.IO) {
-			val articles = withContext(Dispatchers.Default) { getHomeArticles(page) }.data
+			val articles = getHomeArticles(page).data
 			if (page == 0) {
-				val topArticles = withContext(Dispatchers.Default) { getTopArticles() }.data
+				val topArticles = getTopArticles().data
 				topArticles.forEach { it.isTop = true }
-				val banner = withContext(Dispatchers.Default) { getBanners() }.data
+				val banner = getBanners().data
 				topArticles.addAll(articles.datas)
 				BaseResponse(HomeZipResponse(topArticles, articles.hasMore(), banner))
 			} else {

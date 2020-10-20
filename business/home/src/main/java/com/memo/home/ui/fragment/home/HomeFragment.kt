@@ -3,7 +3,6 @@ package com.memo.home.ui.fragment.home
 import android.os.Bundle
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import com.memo.base.entity.remote.BannerResponse
@@ -96,7 +95,7 @@ class HomeFragment : BaseVmFragment<HomeViewModel>() {
 	}
 
 	override fun initObserver() {
-		mViewModel.homeLiveData.observe(this, Observer { data ->
+		mViewModel.homeLiveData.observe(this, { data ->
 			data.data?.let {
 				// 轮播图
 				it.banner?.let { mBannerView.refreshData(it) }

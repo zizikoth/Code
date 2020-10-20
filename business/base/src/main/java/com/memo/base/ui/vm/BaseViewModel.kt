@@ -25,10 +25,13 @@ import kotlinx.coroutines.withContext
  */
 open class BaseViewModel : ViewModel() {
 
+	/*** 判断当前页面是否是第一次加载 ***/
 	private var isFirstLoad: Boolean = true
 
+	/*** 请求加载框事件 ***/
 	val loadingEvent: MutableLiveData<String> = MutableLiveData()
 
+	/*** 请求结束界面变化事件 ***/
 	val uiStateChangeEvent: MutableLiveData<UiChangeState> = MutableLiveData()
 
 	/**

@@ -61,7 +61,6 @@ dependencies {
 	api DeptConfig.TransfereeGlide
 	api DeptConfig.FlycoTabLayout
 	api DeptConfig.UCrop
-	api DeptConfig.WorkManager
 	api DeptConfig.NavigationFragment
 	api DeptConfig.NavigationUi
 
