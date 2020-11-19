@@ -18,6 +18,7 @@ import com.memo.component.ui.motionlayout.MotionLayout1Activity
 import com.memo.component.ui.motionlayout.MotionLayout2Activity
 import com.memo.component.ui.motionlayout.MotionLayout3Activity
 import com.memo.component.ui.navigation.NavigationActivity
+import com.memo.component.ui.scroll.ScrollActivity
 import com.memo.component.ui.share.ShareElementListActivity
 import com.memo.component.ui.update.UpdateActivity
 import com.memo.component.ui.vp2.ViewPager2Activity
@@ -85,7 +86,8 @@ class ComponentFragment : BaseFragment() {
 			"Handler",
 			"Navigation",
 			"ViewPager2",
-			"ClipToPadding"
+			"ClipToPadding",
+			"Scroll"
 		)
 	}
 
@@ -135,6 +137,7 @@ class ComponentFragment : BaseFragment() {
 				"Navigation" -> startActivity<NavigationActivity>()
 				"ViewPager2" -> startActivity<ViewPager2Activity>()
 				"ClipToPadding" -> startActivity<ClipPaddingActivity>()
+				"Scroll" -> startActivity<ScrollActivity>()
 			}
 		}
 	}

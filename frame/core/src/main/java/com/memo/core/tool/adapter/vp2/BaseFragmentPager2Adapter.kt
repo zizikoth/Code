@@ -20,10 +20,11 @@ class BaseFragmentPager2Adapter : FragmentStateAdapter {
 
 	constructor(fragment: Fragment) : super(fragment)
 
-	private lateinit var fragments: ArrayList<Fragment>
+	private val fragments: ArrayList<Fragment> = arrayListOf()
 
 	fun setData(fragments: ArrayList<Fragment>) {
-		this.fragments = fragments
+		this.fragments.clear()
+		this.fragments.addAll(fragments)
 	}
 
 	override fun getItemCount(): Int = fragments.size

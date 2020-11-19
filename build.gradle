@@ -1,7 +1,7 @@
 apply plugin: 'com.alibaba.arouter'
 buildscript {
 
-    repositories {
+	repositories {
         google()
         jcenter()
         maven { url 'https://dl.bintray.com/cjt/maven' }

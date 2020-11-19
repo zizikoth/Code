@@ -124,7 +124,15 @@ fun tryCatch(tryToDo: () -> Unit, catchToDo: (Exception) -> Unit = {}) {
 	try {
 		tryToDo()
 	} catch (e: Exception) {
+		e.printStackTrace()
 		catchToDo(e)
 	}
 }
 
+// ------------------------------- 检查空内容 -------------------------------//
+fun checkNoNull(vararg lists: Any?): Boolean {
+	lists.forEach {
+		if (it == null) return false
+	}
+	return true
+}

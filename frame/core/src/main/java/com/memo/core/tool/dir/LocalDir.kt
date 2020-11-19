@@ -14,7 +14,7 @@ import com.memo.core.tool.app.BaseApp
 object LocalDir {
 
 	/*** 本地缓存根目录 ***/
-	val CACHE_ROOT_PATH = BaseApp.app.getExternalFilesDir("Caches")
+	val CACHE_ROOT_PATH = BaseApp.app.getExternalFilesDir("Caches")?.absolutePath
 
 	/*** 本地图片压缩缓存 ***/
 	val CACHE_DIR_COMPRESS: String = "$CACHE_ROOT_PATH/compress"

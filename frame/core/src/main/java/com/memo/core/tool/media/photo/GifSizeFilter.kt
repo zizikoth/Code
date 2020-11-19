@@ -1,4 +1,4 @@
-package com.memo.core.tool.photo
+package com.memo.core.tool.media.photo
 
 import android.content.Context
 import com.memo.core.R

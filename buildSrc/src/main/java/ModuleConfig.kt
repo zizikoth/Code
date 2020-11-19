@@ -11,4 +11,5 @@
 object ModuleConfig {
 	const val isModuleHomeRunAlone = false
 	const val isModuleComponentRunAlone = true
+	const val isModuleDemoRunAlone = true
 }

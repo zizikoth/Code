@@ -32,10 +32,6 @@ public class AlignTextView extends AppCompatTextView {
 
 	public AlignTextView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
-		init(context, attrs);
-	}
-
-	private void init(Context context, AttributeSet attrs) {
 		setTextColor(getCurrentTextColor());
 	}
 
@@ -45,6 +41,7 @@ public class AlignTextView extends AppCompatTextView {
 		getPaint().setColor(color);
 	}
 
+	@Override
 	protected void onDraw(Canvas canvas) {
 		CharSequence content = getText();
 		if (!(content instanceof String)) {
@@ -58,7 +55,8 @@ public class AlignTextView extends AppCompatTextView {
 			int lineBaseline = layout.getLineBaseline(i) + getPaddingTop();
 			int lineStart = layout.getLineStart(i);
 			int lineEnd = layout.getLineEnd(i);
-			if (i == layout.getLineCount() - 1) { // 最后一行
+			// 最后一行
+			if (i == layout.getLineCount() - 1) {
 				canvas.drawText(text.substring(lineStart), getPaddingLeft(), lineBaseline, getPaint());
 				break;
 			} else { //中间行

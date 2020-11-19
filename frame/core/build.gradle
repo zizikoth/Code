@@ -31,6 +31,7 @@ dependencies {
 	api DeptConfig.AndroidSwipeLayout
 	api DeptConfig.BannerViewPager
 	api DeptConfig.BaseRecyclerViewAdapterHelper
+	api DeptConfig.ConsecutiveScroll
 	api DeptConfig.CardView
 	api DeptConfig.ConstraintLayout
 	api DeptConfig.Coroutine

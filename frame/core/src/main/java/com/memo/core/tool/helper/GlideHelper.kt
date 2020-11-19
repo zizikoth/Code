@@ -3,6 +3,8 @@ package com.memo.core.tool.helper
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
@@ -31,6 +33,8 @@ object GlideHelper {
 	fun loadImage(url: Any?, imageView: ImageView) {
 		GlideApp.with(imageView)
 			.load(url)
+			.placeholder(ColorDrawable(Color.LTGRAY))
+			.error(ColorDrawable(Color.LTGRAY))
 			.centerCrop()
 			.into(imageView)
 	}
@@ -73,6 +77,8 @@ object GlideHelper {
 	) {
 		GlideApp.with(imageView)
 			.load(url)
+			.placeholder(ColorDrawable(Color.LTGRAY))
+			.error(ColorDrawable(Color.LTGRAY))
 			.transform(CenterCrop(), RoundedCorners(radius))
 			.into(imageView)
 	}
@@ -114,6 +120,8 @@ object GlideHelper {
 	) {
 		GlideApp.with(imageView)
 			.load(url)
+			.placeholder(ColorDrawable(Color.LTGRAY))
+			.error(ColorDrawable(Color.LTGRAY))
 			.transform(CenterCrop(), CircleCrop())
 			.into(imageView)
 	}

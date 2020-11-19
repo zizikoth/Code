@@ -1,4 +1,4 @@
-package com.memo.core.tool.preview
+package com.memo.core.tool.media.preview
 
 import android.graphics.Color
 import android.widget.ImageView

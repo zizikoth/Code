@@ -13,6 +13,7 @@
 		android:theme="@style/BaseTheme"
 		android:usesCleartextTraffic="true"
 		tools:ignore="AllowBackup">
+		<activity android:name=".ui.scroll.ScrollActivity"></activity>
 		<activity android:name=".ui.clip.ClipPaddingActivity" />
 		<activity android:name=".ui.vp2.ViewPager2Activity" />
 		<activity android:name=".ui.navigation.NavigationActivity" />

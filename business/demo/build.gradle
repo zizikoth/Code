@@ -1,0 +1,56 @@
+if (ModuleConfig.isModuleDemoRunAlone) {
+	apply plugin: 'com.android.application'
+} else {
+	apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+	compileSdkVersion Config.compileSdkVersion
+	defaultConfig {
+		if (ModuleConfig.isModuleDemoRunAlone) {
+			applicationId Config.applicationId + project.name
+		}
+		minSdkVersion Config.minSdkVersion
+		targetSdkVersion Config.targetSdkVersion
+		versionCode Config.versionCode
+		versionName Config.versionName
+		testInstrumentationRunner Config.androidJunitRunner
+		multiDexEnabled true
+	}
+
+	sourceSets {
+		main {
+			if (ModuleConfig.isModuleDemoRunAlone) {
+				manifest.srcFile 'src/main/manifest/application/AndroidManifest.xml'
+			} else {
+				manifest.srcFile 'src/main/manifest/module/AndroidManifest.xml'
+			}
+		}
+	}
+
+	compileOptions {
+		targetCompatibility JavaVersion.VERSION_1_8
+		sourceCompatibility JavaVersion.VERSION_1_8
+	}
+
+	kotlinOptions { jvmTarget = "1.8" }
+
+	buildFeatures { dataBinding = true }
+}
+
+kapt {
+	arguments {
+		arg("AROUTER_MODULE_NAME", project.getName())
+	}
+}
+
+dependencies {
+	testImplementation DeptConfig.Junit
+	androidTestImplementation DeptConfig.TestJunit
+	androidTestImplementation DeptConfig.TestEspresso
+
+	api project(path: ':business:base')
+}

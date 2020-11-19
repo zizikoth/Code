@@ -2,7 +2,11 @@
 
 package com.memo.core.tool.ext
 
+import android.graphics.Color
 import android.text.Html
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import com.blankj.utilcode.util.EncryptUtils
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -94,10 +98,10 @@ fun Double.keep2Decimal(): String {
 }
 
 /**
- * 换行
+ * 首航缩进
  */
-fun StringBuilder.lineBreak() {
-	this.append("\n")
+fun String.firstLineIndent(): SpannableStringBuilder {
+	val span = SpannableStringBuilder("缩进$this")
+	span.setSpan(ForegroundColorSpan(Color.TRANSPARENT), 0, 2, Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
+	return span
 }
-
-

@@ -34,13 +34,16 @@ fun drawable(id: Int) =
 fun dimen(id: Int) =
 	BaseApp.app.applicationContext.resources.getDimension(id)
 
-fun Int.dp2px() = ConvertUtils.dp2px(this.toFloat())
+val Int.dp2px get() = ConvertUtils.dp2px(this.toFloat())
+val Int.dp2pxf get() = this.dp2px.toFloat()
+val Int.sp2px get() = ConvertUtils.sp2px(this.toFloat())
+val Int.sp2pxf get() = this.sp2px.toFloat()
 
-fun Float.dp2px() = ConvertUtils.dp2px(this)
+val Float.dp2px get() = ConvertUtils.dp2px(this)
+val Float.dp2pxf get() = this.dp2px.toFloat()
+val Float.sp2px get() = ConvertUtils.sp2px(this)
+val Float.sp2pxf get() = this.sp2px.toFloat()
 
-fun Int.sp2px() = ConvertUtils.sp2px(this.toFloat())
-
-fun Float.sp2px() = ConvertUtils.sp2px(this)
 
 fun Context.inflaterView(@LayoutRes layoutRes: Int, parent: ViewGroup? = null): View =
 	View.inflate(this, layoutRes, parent)

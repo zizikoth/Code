@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".ui.MainActivity">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<com.memo.core.widget.textview.AverageTextView
+			android:layout_width="@dimen/dp150"
+			android:layout_height="@dimen/dp50"
+			android:background="@color/color_blue"
+			app:average_gravity="Top"
+			app:average_text="A幢B楼C层1-23室"
+			app:average_textBold="true"
+			app:average_textColor="@color/white"
+			app:average_textSize="@dimen/sp14" />
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/color_red"
+			android:gravity="top"
+			android:text="室32-1层C楼B幢A"
+			android:textColor="@color/white"
+			android:textSize="@dimen/sp13"
+			android:textStyle="bold" />
+	
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<com.memo.core.widget.textview.AverageTextView
+			android:layout_width="@dimen/dp150"
+			android:layout_height="@dimen/dp50"
+			android:background="@color/color_red"
+			app:average_gravity="Center"
+			app:average_text="A幢B楼C层1-23室"
+			app:average_textColor="@color/white"
+			app:average_textSize="@dimen/sp14" />
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/color_blue"
+			android:gravity="center_vertical"
+			android:text="室32-1层C楼B幢A"
+			android:textColor="@color/black"
+			android:textSize="@dimen/sp13" />
+	
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<com.memo.core.widget.textview.AverageTextView
+			android:layout_width="@dimen/dp150"
+			android:layout_height="@dimen/dp50"
+			android:background="@color/color_blue"
+			app:average_gravity="Bottom"
+			app:average_text="A幢B楼C层1-23室"
+			app:average_textColor="@color/white"
+			app:average_textSize="@dimen/sp14" />
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/color_red"
+			android:gravity="bottom"
+			android:text="室32-1层C楼B幢A"
+			android:textColor="@color/black"
+			android:textSize="@dimen/sp13" />
+	
+	</LinearLayout>
+
+
+</LinearLayout>

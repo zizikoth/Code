@@ -59,5 +59,17 @@
 		<attr name="item_divider_color" format="color" />
 		<attr name="item_divider_margin" format="dimension" />
 	</declare-styleable>
+	
+	<declare-styleable name="AverageTextView">
+		<attr name="average_text" format="string" />
+		<attr name="average_textSize" format="dimension" />
+		<attr name="average_textColor" format="color" />
+		<attr name="average_textBold" format="boolean" />
+		<attr name="average_gravity" format="enum">
+			<enum name="Top" value="1" />
+			<enum name="Center" value="2" />
+			<enum name="Bottom" value="3" />
+		</attr>
+	</declare-styleable>
 
 </resources>

@@ -30,7 +30,7 @@
 			android:value="true" />
 		
 		<provider
-			android:name="com.memo.core.tool.photo.MatisseFileProvider"
+			android:name="com.memo.core.tool.media.photo.MatisseFileProvider"
 			android:authorities="${applicationId}.provider.MatisseFileProvider"
 			android:exported="false"
 			android:grantUriPermissions="true">

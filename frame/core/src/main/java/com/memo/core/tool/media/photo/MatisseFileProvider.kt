@@ -1,4 +1,4 @@
-package com.memo.core.tool.photo
+package com.memo.core.tool.media.photo
 
 import androidx.core.content.FileProvider
 

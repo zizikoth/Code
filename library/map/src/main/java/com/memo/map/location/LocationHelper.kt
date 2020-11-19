@@ -4,7 +4,7 @@ import com.amap.api.location.AMapLocation
 import com.amap.api.location.AMapLocationClient
 import com.amap.api.location.AMapLocationClientOption
 import com.blankj.utilcode.util.LogUtils
-import com.memo.base.tool.app.BaseApp
+import com.memo.core.tool.app.BaseApp
 
 
 /**

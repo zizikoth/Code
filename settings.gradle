@@ -4,6 +4,7 @@ include ':app'
 include ':business:base'
 include ':business:home'
 include ':business:component'
+include ':business:demo'
 // 功能组件
 include ':library:map'
 include ':library:pay'
